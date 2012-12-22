@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteOptions Inherit
+
+#Begin gzip and deflate
+<ifModule mod_deflate.c>
+  <filesMatch "\.(css|js|x?html?|php)$">
+    SetOutputFilter DEFLATE
+  </filesMatch>
+</ifModule>
+# END gzip
